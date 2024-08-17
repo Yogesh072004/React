@@ -42,7 +42,7 @@ import './App.css'
 
 function ClickFunction(props) {
     const Hello= (name)=>{
-        alert("Hello "+name)
+        alert("Hello your name is: "+name)
         
     }
   return (
