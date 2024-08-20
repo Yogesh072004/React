@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Rendering</title>
+    <script src="./Files/react.development.js"></script>
+    <script src="./Files/react-dom.development.js"></script>
+    <script src="./Files/babel.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+   //1. if Statement
+ 
+/*function MissedGoal() {
+	return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+	return <h1>GOAL!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+  if (isGoal) {
+    return <MadeGoal/>;
+  }
+  return <MissedGoal/>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Goal isGoal={false} />);*/
+
+//2.Logical && Operator
+
+/*function Garage(props) {
+  const cars = props.cars;
+  return (
+    <div>
+      <h1>Garage</h1>
+      {cars.length > 0 &&
+        <h2>
+          You have {cars.length} cars in your garage.
+        </h2>
+      }
+    </div>
+  );
+}
+
+const cars = ['Ford', 'BMW', 'Audi'];
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage cars={cars} />);*/ 
+
+//3.Ternary
+function MissedGoal() {
+	return <h1>MISSED!</h1>;
+}
+
+function MadeGoal() {
+	return <h1>GOAL!</h1>;
+}
+
+function Goal(props) {
+  const isGoal = props.isGoal;
+	return (
+		<div>
+			{ isGoal ? <MadeGoal/> : <MissedGoal/> }
+		</div>
+	);
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Goal isGoal={false} />);
+
+
+                
+    </script>
+</body>
+</html>
